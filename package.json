@@ -1,0 +1,6 @@
+{
+  "name": "advent_of_code",
+  "scripts": {
+    "day-2": "deno run --allow-all --watch src/day-2/index.ts"
+  }
+}
