@@ -13,15 +13,15 @@ const lines = stacks.split("\n").slice(0, -1);
 
 const splitString = (str, numChars) => {
   // Create an array to store the result
-  var result = [];
+  let result = [];
 
-  // Create a variable to keep track of the current index
-  var currentIndex = 0;
+  // Create a letiable to keep track of the current index
+  let currentIndex = 0;
 
   // Loop until the current index is greater than or equal to the length of the string
   while (currentIndex < str.length) {
     // Get the substring of the specified number of characters from the current index
-    var substring = str.substring(currentIndex, currentIndex + numChars);
+    let substring = str.substring(currentIndex, currentIndex + numChars);
     const cleanedSubstring = substring.match(/\[([^\]]+)\]/)?.[1];
     // Add the substring to the result array
     result.push(cleanedSubstring);
@@ -53,7 +53,7 @@ const Part1 = (stepsList, stackList) => {
 
     const fromStack = stackList[from - 1];
     const toStack = stackList[to - 1];
-    var movedElements = fromStack.splice(-quantityToMove).reverse();
+    let movedElements = fromStack.splice(-quantityToMove).reverse();
     toStack.push(...movedElements);
   });
   const lastCrateList = stackList
@@ -68,7 +68,7 @@ const Part2 = (stepsList, stackList) => {
 
     const fromStack = stackList[from - 1];
     const toStack = stackList[to - 1];
-    var movedElements = fromStack.splice(-quantityToMove);
+    let movedElements = fromStack.splice(-quantityToMove);
     toStack.push(...movedElements);
   });
   const lastCrateList = stackList
