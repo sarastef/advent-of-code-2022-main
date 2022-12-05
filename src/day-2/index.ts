@@ -1,9 +1,9 @@
 const filePath = new URL(".", import.meta.url).pathname + "input.txt";
 const input = await Deno.readTextFile(filePath);
 
-let Rock = ["A", "X"];
-let Paper = ["B", "Y"];
-let Scissors = ["C", "Z"];
+const Rock = ["A", "X"];
+const Paper = ["B", "Y"];
+const Scissors = ["C", "Z"];
 
 const Rock_val = 1;
 const Paper_val = 2;
@@ -13,23 +13,19 @@ const LOST_val = 0;
 const DRAW_val = 3;
 const WIN_val = 6;
 
-const sign = (sign) => {
+const sign = (sign: string) => {
   if (Rock.includes(sign)) return "Rock";
   if (Paper.includes(sign)) return "Paper";
   if (Scissors.includes(sign)) return "Scissors";
 };
-const getFutureResult = (sign) => {
+const getFutureResult = (sign: string) => {
   switch (sign) {
     case "X":
       return "Lose";
-      break;
     case "Y":
       return "Draw";
-      break;
     case "Z":
       return "Win";
-    default:
-      break;
   }
 };
 const signScore = {

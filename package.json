@@ -1,6 +1,10 @@
 {
   "name": "advent_of_code",
   "scripts": {
-    "day-2": "deno run --allow-all --watch src/day-2/index.ts"
+    "day-2": "deno run --allow-all --watch src/day-2/index.ts",
+    "day-4": "deno run --allow-all --watch src/day-4/index.ts",
+    "day-5": "deno run --allow-all --watch src/day-5/index.ts"
+
+
   }
 }
